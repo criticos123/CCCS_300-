@@ -15,17 +15,16 @@ public class CoinMachine_Methods {
 
             int rounded_Up_Change= (int) (Math.ceil(number / 5d) * 5);
             return rounded_Up_Change;
+            
         }
     }
 
-    //method to round up ther
+    //This method will take in the cash and price to get the cahnge and amount of coins needed.
     public void getChange(int cash,int price){
 
         //will get the amount of change 
         int change = cash-price;
         int rounded_Change= rounding_Change(change);
-        //call the rounding methods to round either up or down for my change
-
 
         //assign coin values 
         int toonies=200;
@@ -36,6 +35,7 @@ public class CoinMachine_Methods {
 
 
         System.out.println("your change is "+change);
+        System.out.println("your rounded change is "+rounded_Change);
 
         //get the number of each specific coin by dividing the remainder by the value of each coin
         int get_Toonies= rounded_Change/toonies;
@@ -74,12 +74,13 @@ public class CoinMachine_Methods {
 
         scanner.close();
 
+        //condition to make sure user inputs poisitve values and proper cost of the item.
         if(cash>=price && cash>0 && price>0){
  
-        System.out.println("money given is  "+cash);
-        System.out.println("cost of the item is  "+price);   
+            System.out.println("money given is  "+cash);
+            System.out.println("cost of the item is  "+price);   
         
-        getChange(cash ,price);
+            getChange(cash ,price);
 
         }else{
 
