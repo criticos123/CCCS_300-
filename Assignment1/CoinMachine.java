@@ -5,7 +5,7 @@ public class CoinMachine {
     public static int rounding_Change(int number){
 
         if(number%5<3){
-
+            //conddition to check if its 3 and over to round up
             int rounded_Down_Change= (int) (Math.floor(number / 5d) * 5);
             return rounded_Down_Change;
 
@@ -17,7 +17,7 @@ public class CoinMachine {
         }
     }
 
-    //method to get each type of coin 
+    //method to get each type of coin. passes in the cash and price inputd.
     public static void getChange(int cash, int price){
 
         int change = cash-price;
@@ -30,9 +30,8 @@ public class CoinMachine {
         int dimes=10;
         int nickels=5;
 
-
-        System.out.println("your change is "+change);
-        System.out.println("your rounded change is "+rounded_Change);
+        //printed out the value of change that is rounded
+        System.out.println("your change is "+rounded_Change);
 
         //get the number of each specific coin by dividing the remainder by the value of each coin
         int get_Toonies= rounded_Change/toonies;
@@ -57,7 +56,7 @@ public class CoinMachine {
     }
     public static void main(String [] args){
         
-    // This method will take in the cash and price to get the cahnge and amount of coins needed.
+    //command line inputs first one is cash and then price
         String inputOne= args[0];
         String inputTwo= args[1];
 
