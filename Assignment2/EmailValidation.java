@@ -78,6 +78,7 @@ public class EmailValidation {
             result=false;
 
         }
+
         return result;
     }
 
@@ -122,24 +123,19 @@ public class EmailValidation {
         return result;
     }
 
+    //method to check if the prefix is valid
     public static boolean isValidPrefix(String prefix){
 
         boolean result=true;;
         char[]prefix_Array=prefix.toCharArray();
-        int counter=0;
 
         for(char ch:prefix_Array){
 
             if(isValidPrefixChar(ch)==false || check_For_Next_Char(prefix)==false){
 
-                counter++;
+                result=false;
 
             }
-        }
-
-        if(counter>=1){
-
-            result=false;
         }
 
         return result;
@@ -151,7 +147,6 @@ public class EmailValidation {
 
         boolean result=true;
         char[]domain_Array=domain.toCharArray();
-        int counter=0;
         String []split_Domain=domain.split("\\.");
             
         for(char ch:domain_Array){
@@ -159,14 +154,9 @@ public class EmailValidation {
             if(isValidDomainChar(ch)==false || check_For_Next_Char(domain)==false || 
                split_Domain[0].length()<1 || split_Domain[1].length()<2) {
 
-                counter++;
+                result=false;
 
             }
-        }
-
-        if(counter>=1){
-
-            result=false;
         }
 
         return result;
@@ -193,9 +183,9 @@ public class EmailValidation {
     public static void main(String [] args){
 
         String print_Email= input_Email();
-        boolean part_A=isAlphanumeric('a');
+        boolean part_A=isAlphanumeric('&');
         boolean part_B_One= isValidPrefixChar('.');
-        boolean part_B_Two= isValidDomainChar('#');
+        boolean part_B_Two= isValidDomainChar('_');
         boolean part_C=exactlyOneAt(print_Email);
         String part_D=getPrefix(print_Email);
         String part_E=getDomain(print_Email);
@@ -203,7 +193,7 @@ public class EmailValidation {
         boolean part_F_Two=isValidDomain(part_E);
         Boolean part_G=isValidEmail(print_Email);
 
-        System.out.println(" isAlphanumeric(a) returns "+ part_A);
+        System.out.println(" isAlphanumeric(&) returns "+ part_A);
         System.out.println(" isValidPrefixChar(.) returns "+ part_B_One);
         System.out.println(" isValidDomainChar(#) returns "+ part_B_Two);
         System.out.println(" exactlyOneAt("+print_Email+ ") returns "+ part_C);
