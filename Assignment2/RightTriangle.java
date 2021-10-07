@@ -1,19 +1,22 @@
-public class LeftTriangle {
+public class RightTriangle {
 
-   
-   public static void printLeftTriangle(int rows){
+    public static void printRightTriangle(int rows){
 
-        for(int i=0;i<=rows;i++){
 
-            for(int j=1;j<=i;j++){
 
+        for(int i=1;i <= rows;i++){
+
+            //need three loops. one for number of rows. one for spaces and one for stars
+            for(int j=1;j <= rows-i;j++){
+                System.out.print("  ");
+            }
+            
+            for(int k=1;k<=i; k++){
                 System.out.print("* ");
             }
 
             System.out.println();
-
         }
-
    }
 
     public static void main(String [] args){
@@ -24,7 +27,7 @@ public class LeftTriangle {
 
             if(number>=0){
 
-                printLeftTriangle(number);
+                printRightTriangle(number);
 
             }else{
 
@@ -34,4 +37,3 @@ public class LeftTriangle {
     }
     
 }
-
