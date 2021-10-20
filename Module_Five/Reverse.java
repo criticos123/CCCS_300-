@@ -5,10 +5,9 @@ public class Reverse {
     
 
     //method to get each type of coin. passes in the cash and price inputd.
-    public static int getNumber(int number){
+    public static void getNumber(int number){
 
-     return number;
-
+       
     }
     public static void main(String [] args){
         
@@ -17,9 +16,7 @@ public class Reverse {
         int number = scanner.nextInt();  
         scanner.close();
 
-        int reverse_Number= getNumber(number);
-
-        System.out.println( number+ " reversed is:  " + reverse_Number);
+        getNumber(number);
         
     }
 
