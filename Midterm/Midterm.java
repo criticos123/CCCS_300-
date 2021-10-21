@@ -40,17 +40,23 @@ public class Midterm {
            return modOne*modTwo*modThree;
         }
     
-        public static int subLR(String number){
+        public static void subLR(String number){
     
             char[] arr= number.toCharArray();
+
             int halfsize= (arr.length)/2;
+            int secondHalf=arr.length-halfsize;
             int leftInt=0;
             int rightInt=0;
             int sub=0;
+
             StringBuilder sr=new StringBuilder();
             StringBuilder st=new StringBuilder();
             String str="";
             String strTwo="";
+            
+            System.out.println(secondHalf);
+
 
             for(int i=0;i<halfsize;i++ ){
     
@@ -58,14 +64,26 @@ public class Midterm {
                 leftInt= Integer.parseInt(str);
                    
             }
-    
-            for (int j=halfsize;j<arr.length;j++) {
-               
-                strTwo=st.append(arr[j]).toString();
-                rightInt= Integer.parseInt(strTwo);
+
+            if(secondHalf%2!=0){
+
+                halfsize=halfsize+1;
             }
+
+            for ( int j=halfsize;j<arr.length;j++) {
+
+
+                strTwo=st.append(arr[j]).toString();
+               
+                rightInt= Integer.parseInt(strTwo);
+
+            }
+
             sub=leftInt-rightInt;
-            return sub;
+
+            System.out.println(leftInt);
+            System.out.println(rightInt);
+            System.out.println(sub);
         }
             
            
@@ -145,7 +163,7 @@ public class Midterm {
         //size will be the number of rows
         public static void drawCross(int num){
     
-    
+            
        
           
         }
@@ -153,7 +171,7 @@ public class Midterm {
     
         public static void main(String[] args) throws Exception {
            
-            sameVowelsStrings("aei", "ea", "ea");
+            subLR("12345");
             //  boolean printed=sameVowelsStrings("ae", "ea", "ea");
             //  System.out.println(printed);
         }
