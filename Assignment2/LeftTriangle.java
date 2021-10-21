@@ -3,16 +3,17 @@ public class LeftTriangle {
    
    public static void printLeftTriangle(int rows){
 
-        for(int i=0;i<=rows;i++){
+       
+    for(int i=0;i<=rows;i++){
 
-            for(int j=1;j<=i;j++){
+        for(int j=1;j<=i;j++){
 
-                System.out.print("* ");
-            }
-
-            System.out.println();
-
+            System.out.print("* ");
         }
+
+        System.out.println();
+
+    }
 
    }
 

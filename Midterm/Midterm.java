@@ -161,19 +161,33 @@ public class Midterm {
         }
 
         //size will be the number of rows
-        public static void drawCross(int num){
+        public static void drawCross(int rows){
+
+
+            for(int i=0;i<=rows;i++){
+
+                for(int j=1;j<=i;j++){
     
-            
-       
-          
+                    System.out.print(" ");
+                }
+
+           
+
+                System.out.println("*");
+    
+            }
+
+    
         }
+
+            
+          
+
         
     
         public static void main(String[] args) throws Exception {
            
-            subLR("12345");
-            //  boolean printed=sameVowelsStrings("ae", "ea", "ea");
-            //  System.out.println(printed);
+            drawCross(5);
         }
 }
     
