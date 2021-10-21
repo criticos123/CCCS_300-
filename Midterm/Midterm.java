@@ -163,18 +163,19 @@ public class Midterm {
         //size will be the number of rows
         public static void drawCross(int rows){
 
-
-            for(int i=0;i<=rows;i++){
-
-                for(int j=1;j<=i;j++){
-    
-                    System.out.print(" ");
-                }
-
-           
-
-                System.out.println("*");
-    
+            int k=rows*2-1;
+ 
+            for(int i=1;i<=k;i++){
+                            
+                for(int j=1;j<=k;j++){      
+                        
+                    if(j==i || j==k-i+1)
+                        System.out.print("x");
+                        System.out.print(" ");
+                                
+                }  
+                
+                System.out.println();
             }
 
     
