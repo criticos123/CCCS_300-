@@ -55,9 +55,6 @@ public class Midterm {
             String str="";
             String strTwo="";
             
-            System.out.println(secondHalf);
-
-
             for(int i=0;i<halfsize;i++ ){
     
                 str=sr.append(arr[i]).toString();
@@ -65,14 +62,10 @@ public class Midterm {
                    
             }
 
-            if(secondHalf%2!=0){
-
-                halfsize=halfsize+1;
-            }
-
             for ( int j=halfsize;j<arr.length;j++) {
 
-
+                int index=0;
+                
                 strTwo=st.append(arr[j]).toString();
                
                 rightInt= Integer.parseInt(strTwo);
@@ -188,7 +181,7 @@ public class Midterm {
     
         public static void main(String[] args) throws Exception {
            
-            drawCross(5);
+            subLR("1234567");
         }
 }
     
